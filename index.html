@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lebenslauf Elektriker</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p1Cm2MyQ" crossorigin="anonymous" />
+  <!---CSS-->
+  <link href="css/css.css" type="text/css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo"><strong>Elektriker</strong></div>
+      <div class="links">
+        <a href="#about">Über mich</a>
+        <a href="#skills">Fähigkeiten</a>
+        <a href="#experience">Berufserfahrung</a>
+        <a href="#diagrams">Schaltpläne</a>
+        <a href="#contact">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>Über mich</h2>
+      <div class="card about">
+        <img src="image/VAResume.png" alt="Foto" />
+        <p>Vasyl Airiian – erfahrener Elektriker mit über 25 Jahren Berufserfahrung. Spezialisiert auf Planung und
+          Wartung elektrischer Anlagen in Wohn- und Industriegebäuden. Zuverlässig, detailorientiert und teamfähig.</p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2>Fähigkeiten</h2>
+      <div class="skills">
+        <div class="skill">Schalt<br>planerstellung</div>
+        <div class="skill">Lesen von Zeichnungen</div>
+        <div class="skill">SPS-Programmierung, Browser-Technologien </div>
+        <div class="skill">Installation & Inbetriebnahme</div>
+        <div class="skill">CAD (AutoCAD, EPLAN, SolidWorks, Kompas)</div>
+        <div class="skill">Messung & Prüfung</div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <h2>Berufserfahrung</h2>
+      <div class="card">
+        <h3>Führender Spezialist des Automatisierungs- und Mechanisierungslabors – ArcelorMittal Krivoy Rog Ukraine –
+          2022 letzter Arbeitsort</h3>
+        <p><em>2000 – 2022</em></p>
+        <ul>
+          <li>Leiter der Entwicklungsgruppe</li>
+          <li>Entwurf, Bau und Installation elektrischer Systeme für die Metallurgie in der Ukraine</li>
+          <li>Durchführung von Briefings und Schulungen in metallurgischen Unternehmen der Ukraine</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Elektromonteur – Elektromeister bei ArcelorMittal Krivoy Rog Ukraine </h3>
+        <p><em>1993 – 2000</em></p>
+        <ul>
+          <li>Ich war am Aufbau eines Drahtwalzwerks im Werk ArcelorMittal Krivoy Rog bis zur industriellen
+            Inbetriebnahme beteiligt.</li>
+          <li>Montage von Starkstromkabeln und Schaltschränken</li>
+          <li>Inbetriebnahme von Transformatorenstationen</li>
+          <li>Erstellung technischer Dokumentationen</li>
+        </ul>
+      </div>
+      <!--Flugzeug und Techniker-->
+      <div class="card">
+        <h3> Ich war bis – 1993 beruflich tätig</h3>
+        <!--<p><em>2013 – 2018</em></p>-->
+        <ul>
+          <li> Flugzeugbetriebsingenieur der Zivilluftfahrt</li>
+          <li>Zivilluftfahrttechniker</li>
+          <li>Dreher</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Diagrams -->
+    <section id="diagrams" class="section">
+      <h2>Schaltpläne & technische Zeichnungen</h2>
+      <div class="card">
+        <p>Die Collage enthält eine Auswahl technischer Zeichnungen und Schaltpläne, die im Laufe der Jahre mit
+          verschiedenen CAD-Programmen erstellt wurden:</p>
+        <div id="diagram-gallery">
+          <img src="image/collage.png" alt="Schaltplan" />
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Kontakt</h2>
+      <div class="card">
+        <p><i class="fas fa-phone"></i> Telefon: +49 174 8709405</p>
+        <p><i class="fas fa-envelope"></i> E-Mail: vasyl.airiian@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Standort: Offingen, Bayern, Deutschland</p>
+      </div>
+    </section>
+    <!--  Futter-->
+    <section id="contact" class="section">
+
+      <div class="card">
+        <footer>
+          © 2025 VasylAiriian. Alle Rechte vorbehalten.<br> Написанному верить!
+        </footer>
+      </div>
+    </section>
+
+  </div>
+
+
+
+</body>
+<script>
+  document.getElementById('diagram-upload').addEventListener('change', function (e) {
+    const gallery = document.getElementById('diagram-gallery');
+    gallery.innerHTML = '';
+    Array.from(e.target.files).forEach(file => {
+      const reader = new FileReader();
+      reader.onload = function (ev) {
+        const img = document.createElement('img');
+        img.src = ev.target.result;
+        gallery.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    });
+  });
+</script>
+
+</html>
